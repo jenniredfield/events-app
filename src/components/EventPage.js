@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 
 import EventDetailCard from './EventDetailCard';
 
+import '../styles/EventPage.css';
+
 function EventPage() {
   const [status, setStatus] = useState({isLoading: true});
   const { eventId } = useParams();

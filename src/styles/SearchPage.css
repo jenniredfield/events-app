@@ -1,6 +1,7 @@
 .search-page__section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 30px;
 }
 

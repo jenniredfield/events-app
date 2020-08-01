@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 
 import ArtistDetailCard from './ArtistDetailCard';
 
+import '../styles/ArtistPage.css'
+
 function ArtistPage() {
   const [status, setStatus] = useState({isLoading: true});
   const { artistId } = useParams();
@@ -23,19 +25,17 @@ function ArtistPage() {
     }, [artistId, appDispatch]);
 
   return (
-    <div className="artist-page">
       <section className="artist-page__section">
-      {status.isLoading ? <div>Loading...</div> : null}
-      {Object.keys(artistDetail).length ? 
-        <ArtistDetailCard 
-          imageUrl={artistDetail.imageurl} 
-          artistName={artistDetail.name}
-          artistDescription={artistDetail.description}
-          artistSpotifyUrl={artistDetail.spotifyartisturl}
-          artistTwitter={artistDetail.twitter}
-          /> : null}
+        {status.isLoading ? <div>Loading...</div> : null}
+        {Object.keys(artistDetail).length ? 
+            <ArtistDetailCard 
+                imageUrl={artistDetail.imageurl} 
+                artistName={artistDetail.name}
+                artistDescription={artistDetail.description}
+                artistSpotifyUrl={artistDetail.spotifyartisturl}
+                artistTwitter={artistDetail.twitter}
+            /> : null}
       </section>
-    </div>
   );
 }
 

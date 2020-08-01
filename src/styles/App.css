@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   background-color: #46c3be;
+  padding: 20px;
 }
 
 .header__logo {
@@ -35,7 +36,6 @@
   padding: 10px 30px 10px 20px;
   background: white;
   border-radius: 3px;
-  box-shadow: 0px 8px 15px lightgray;
 }
 
 .header__input:focus {

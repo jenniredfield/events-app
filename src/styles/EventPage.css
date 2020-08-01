@@ -1,0 +1,51 @@
+.event-detail-card {
+  margin-top: 30px;
+}
+
+.event-detail-card__content {
+  display: flex;
+}
+
+.event-detail-card__image {
+  width: 30%;
+}
+
+.event-detail-card__content-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding: 10px;
+  width: 70%;
+}
+
+.event-detail-card__content-text p {
+  margin: 10px 0;
+}
+
+.event-detail-card__artists {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.artist-tile {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.artist-tile img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+.artist-tile .artist-name {
+  font-size: 10px;
+  margin-top: 10px;
+}
