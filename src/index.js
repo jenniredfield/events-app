@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import App from './components/App';
+import { BrowserRouter } from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 
 import { AppProvider } from "./context/AppContext";
@@ -10,7 +11,9 @@ import { AppProvider } from "./context/AppContext";
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")

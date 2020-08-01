@@ -3,7 +3,6 @@ export const AppContext = React.createContext({});
 
 export const AppProvider = ({ children }) => {
   const reducer = (state, action) => {
-      console.log('action', action)
     switch (action.type) {
       case "LOAD_EVENTS_LIST":
         return { ...state, eventsList: action.eventsList };
@@ -17,8 +16,8 @@ export const AppProvider = ({ children }) => {
   };
   const [appData, appDispatch] = React.useReducer(reducer, {
     eventsList: [],
-    eventDetail: [],
-    artistDetail: []
+    eventDetail: {},
+    artistDetail: {}
   });
   return (
     <AppContext.Provider value={{ appData, appDispatch }}>

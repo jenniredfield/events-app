@@ -1,16 +1,20 @@
-import React from 'react';
-import { BrowserRouter, Route, Link } from "react-router-dom";
-import SearchPage from './SearchPage';
-import '../styles/App.css';
+import React from "react";
+import { Route } from "react-router-dom";
+import Header from './Header';
+import SearchPage from "./SearchPage";
+import EventPage from "./EventPage";
+import ArtistPage from "./ArtistPage";
+
+import "../styles/App.css";
 
 function App() {
   return (
     <div className="App">
-        <BrowserRouter>
-          <Route exact path="/" component={SearchPage} />
-          {/* <Route path="/event" component={TodoItem} />
-          <Route path="/artist" component={TodoItem} /> */}
-        </BrowserRouter>
+        <Header />
+        <Route path="/search/:keyword" component={SearchPage} />
+        <Route path="/event/:eventId" component={EventPage} />
+        <Route path="/artist/:artistId" component={ArtistPage} />
+        <Route exact path="/" component={() => <div>Main</div>}/>
     </div>
   );
 }

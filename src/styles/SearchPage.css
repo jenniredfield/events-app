@@ -1,0 +1,30 @@
+.search-page__section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.event-card {
+  width: calc(33% - 30px);
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10px 0px;
+  box-shadow: 0px 4px 15px lightgrey;
+}
+
+.event-card img {
+  height: 100px;
+  max-width: 110px;
+  margin: 0 auto;
+}
+
+.event-card p {
+  margin: 10px 0;
+}
+
+.event-card:nth-child(3n - 1) {
+  margin: 10px 20px;
+}
