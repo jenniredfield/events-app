@@ -1,3 +1,5 @@
+// used for testing, to pass the context of the app to all components
+
 import React from "react";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
