@@ -4,7 +4,14 @@ A project that fetches events and artists details from a API. To run:
 
 ### add keys.js file
 
-Added a keys.js file in the src folder of the project. Default export a object with a apiKey property with the correct api key.
+Added a keys.js file in the src folder of the project. Default export a object with a apiKey property with the correct api key. Example:
+
+```
+export default {
+  apiKey: 'API_KEY_HERE'
+}
+
+```
 
 ### `npm start`
 
