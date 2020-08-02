@@ -1,3 +1,10 @@
+.event-detail-page__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .event-detail-card {
   margin-top: 30px;
 }

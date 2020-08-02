@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #46c3be;
+  padding: 20px;
+}
+
+.header__logo {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.header__logo img {
+  width: 100%;
+}
+
+.header__input-container {
+  position: relative;
+  width: 300px;
+  border: none;
+}
+
+.header__input {
+  border: 0;
+  width: 100%;
+  height: 50px;
+  padding: 10px 30px 10px 20px;
+  background: white;
+  border-radius: 3px;
+}
+
+.header__input:focus {
+  outline: none;
+}
+
+.header__input-container .fa-search {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  width: 50px;
+  background: #b4eaea;
+  line-height: 50px;
+  border-radius: 0 3px 3px 0;
+}

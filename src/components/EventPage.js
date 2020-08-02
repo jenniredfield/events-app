@@ -24,10 +24,7 @@ function EventPage() {
         })
     }, [eventId, appDispatch]);
 
-    console.log('eventDetail', eventDetail)
-
   return (
-    <div className="event-detail-page">
       <section className="event-detail-page__section">
         {status.isLoading ? <Loading /> : null}
         {!status.isLoading && Object.keys(eventDetail).length ? 
@@ -39,7 +36,6 @@ function EventPage() {
             artists={eventDetail.artists}
             tickets={eventDetail.tickets} /> : null}
       </section>
-    </div>
   );
 }
 

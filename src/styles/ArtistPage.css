@@ -1,4 +1,7 @@
 .artist-page__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 30px;
 }
 
@@ -19,6 +22,10 @@
   float: left;
   border-radius: 100%;
   margin: 20px;
+}
+
+.artist-detail-card__social-media {
+  margin-top: 20px;
 }
 
 .artist-detail-card__social-media-link {
