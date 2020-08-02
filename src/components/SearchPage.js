@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import axios from 'axios';
 import { getData } from '../services/services';
 import { AppContext } from "../context/AppContext";
 import EventCard from "./EventCard";
 import Loading from "./Loading";
-
+import  keys from '../keys.js';
 import '../styles/SearchPage.css';
 
 function SearchPage() {
@@ -20,7 +19,7 @@ function SearchPage() {
   useEffect(() => {
     setStatus({isLoading: true, wasRequested: true});
     getData(
-      `https://www.skiddle.com/api/v1/events/search?api_key=008f1e6099ecc48e990e3776784d447b&keyword=${keyword}`
+      `https://www.skiddle.com/api/v1/events/search?api_key=${keys.apiKey}&keyword=${keyword}`
     ).then((res) => {
       const { data } = res;
       setStatus({isLoading: false, wasRequested: true});

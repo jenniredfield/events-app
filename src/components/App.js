@@ -14,7 +14,7 @@ function App() {
         <Route path="/search/:keyword" component={SearchPage} />
         <Route path="/event/:eventId" component={EventPage} />
         <Route path="/artist/:artistId" component={ArtistPage} />
-        <Route exact path="/" component={() => <div>Main</div>}/>
+        <Route exact path="/"/>
     </div>
   );
 }
