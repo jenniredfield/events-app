@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getData } from "../services/services";
+// import axios from 'axios';
+import { getData } from '../services/services';
 import { AppContext } from "../context/AppContext";
 import EventCard from "./EventCard";
+import Loading from "./Loading";
 
 import '../styles/SearchPage.css';
 
@@ -30,7 +32,7 @@ function SearchPage() {
       <section className="search-page__section">
         {status.wasRequested && !status.isLoading && !eventsList.length ? <div>No results were found, try again please</div> : null}
         {status.isLoading ? (
-          <div>Loading...</div>
+          <Loading/>
         ) : (
           eventsList.map((event) => {
             return (

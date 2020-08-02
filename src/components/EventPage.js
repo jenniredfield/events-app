@@ -4,7 +4,7 @@ import { AppContext } from "../context/AppContext";
 import { useParams } from "react-router-dom";
 
 import EventDetailCard from './EventDetailCard';
-
+import Loading from "./Loading";
 import '../styles/EventPage.css';
 
 function EventPage() {
@@ -29,7 +29,7 @@ function EventPage() {
   return (
     <div className="event-detail-page">
       <section className="event-detail-page__section">
-        {status.isLoading ? <div>Loading...</div> : null}
+        {status.isLoading ? <Loading /> : null}
         {!status.isLoading && Object.keys(eventDetail).length ? 
           <EventDetailCard 
             imageUrl={eventDetail.largeimageurl} 

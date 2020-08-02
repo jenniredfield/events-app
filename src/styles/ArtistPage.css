@@ -20,3 +20,22 @@
   border-radius: 100%;
   margin: 20px;
 }
+
+.artist-detail-card__social-media-link {
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.artist-detail-card__social-media-link:first-child {
+  margin-left: 0;
+}
+
+.artist-detail-card__social-media-link i {
+  font-size: 30px;
+  color: #333;
+}
+
+.artist-detail-card__social-media-link i:hover {
+  color: #46c3be;
+}

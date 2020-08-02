@@ -1,6 +1,8 @@
 import React from 'react';
 import {sanitiseString} from '../helpers/helpers';
 
+import SocialMediaLink from './SocialMediaLink';
+
 function ArtistDetailCard({imageUrl, artistName, artistDescription, artistSpotifyUrl, artistTwitter}) {
   return (
     <div className="artist-detail-card">
@@ -8,8 +10,8 @@ function ArtistDetailCard({imageUrl, artistName, artistDescription, artistSpotif
         <h1 dangerouslySetInnerHTML={{__html: artistName}}/>
         <p dangerouslySetInnerHTML={{__html: artistDescription}}/>
         <div className="artist-detail-card__social-media">
-            <a href={artistSpotifyUrl}>Spotify</a>
-            <a href={`https://www.twitter.com/${artistTwitter}`} target="_blank" rel="noopener noreferrer">Twitter</a>
+            <SocialMediaLink platform="spotify" url={artistSpotifyUrl} />
+            <SocialMediaLink platform="twitter" url={`https://www.twitter.com/${artistTwitter}`} target="_blank" />
         </div>
     </div>
   );

@@ -3,9 +3,10 @@ import { getData } from "../services/services";
 import { AppContext } from "../context/AppContext";
 import { useParams } from "react-router-dom";
 
-import ArtistDetailCard from './ArtistDetailCard';
-
-import '../styles/ArtistPage.css'
+import ArtistDetailCard from "./ArtistDetailCard";
+import Loading from "./Loading";
+ 
+import "../styles/ArtistPage.css"
 
 function ArtistPage() {
   const [status, setStatus] = useState({isLoading: true});
@@ -26,7 +27,7 @@ function ArtistPage() {
 
   return (
       <section className="artist-page__section">
-        {status.isLoading ? <div>Loading...</div> : null}
+        {status.isLoading ? <Loading /> : null}
         {Object.keys(artistDetail).length ? 
             <ArtistDetailCard 
                 imageUrl={artistDetail.imageurl} 

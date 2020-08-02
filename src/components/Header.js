@@ -23,19 +23,18 @@ function Header() {
 
   return (
     <header className="header">
-      <Link className="header__logo" to="/">
+      <Link className="header__logo" to="/" data-testid="header-logo-link">
           <img src="/skiddle-logo.png" alt="logo"/>
       </Link>
-
-      <field className="header__input-container">
+      <fieldset className="header__input-container">
         <input
             placeholder="Search artist, town or keyword..."
             onChange={handleOnChange}
             onKeyDown={handleKeyDown}
             className="header__input"
         />      
-        <i class="fa fa-search" aria-hidden="true" onClick={navigateToSearch}></i>
-      </field>
+        <i className="fa fa-search" aria-hidden="true" onClick={navigateToSearch} data-testid="header-input-button"></i>
+      </fieldset>
     </header>
   );
 }

@@ -27,6 +27,7 @@
 .header__input-container {
   position: relative;
   width: 300px;
+  border: none;
 }
 
 .header__input {
