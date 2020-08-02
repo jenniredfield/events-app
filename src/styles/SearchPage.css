@@ -6,7 +6,7 @@
 }
 
 .event-card {
-  width: calc(33% - 30px);
+  width: 100%;
   text-align: center;
   padding: 10px;
   display: flex;
@@ -28,4 +28,16 @@
 
 .event-card:nth-child(3n - 1) {
   margin: 10px 20px;
+}
+
+@media only screen and (min-width: 560px) {
+  .event-card {
+    width: calc(45% - 30px);
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .event-card {
+    width: calc(33% - 30px);
+  }
 }

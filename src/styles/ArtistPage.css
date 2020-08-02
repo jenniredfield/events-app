@@ -5,6 +5,10 @@
   margin-top: 30px;
 }
 
+.artist-detail-card {
+  text-align: center;
+}
+
 .artist-page__section h1 {
   text-align: center;
   margin-bottom: 10px;
@@ -12,20 +16,22 @@
 
 .artist-page__section p {
   text-align: justify;
+  padding: 20px;
 }
 
 .artist-detail-card__image {
-  -webkit-shape-outside: circle(50%);
-  shape-outside: circle(50%);
+  /* -webkit-shape-outside: circle(50%);
+  shape-outside: circle(50%); */
   width: 175px !important;
   height: 175px !important;
-  float: left;
+  /* float: left; */
   border-radius: 100%;
   margin: 20px;
 }
 
 .artist-detail-card__social-media {
   margin-top: 20px;
+  text-align: center;
 }
 
 .artist-detail-card__social-media-link {
@@ -45,4 +51,15 @@
 
 .artist-detail-card__social-media-link i:hover {
   color: #46c3be;
+}
+
+@media only screen and (min-width: 760px) {
+  .artist-detail-card {
+    text-align: unset;
+  }
+
+  .artist-detail-card__image {
+    shape-outside: circle(50%);
+    float: left;
+  }
 }

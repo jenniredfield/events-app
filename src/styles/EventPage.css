@@ -11,6 +11,9 @@
 
 .event-detail-card__content {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .event-detail-card__image {
@@ -56,4 +59,10 @@
 .artist-tile .artist-name {
   font-size: 10px;
   margin-top: 10px;
+}
+
+@media only screen and (min-width: 560px) {
+  .event-detail-card__content {
+    flex-direction: row;
+  }
 }
