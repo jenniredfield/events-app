@@ -13,6 +13,7 @@ function Header() {
   }
 
   function navigateToSearch() {
+    setKeyword('');
     history.push(`/search/${keyword}`);
   }
 
@@ -32,6 +33,7 @@ function Header() {
             placeholder="Search artist, town or keyword..."
             onChange={handleOnChange}
             onKeyDown={handleKeyDown}
+            value={keyword}
             className="header__input"
         />      
         <i className="fa fa-search" aria-hidden="true" onClick={navigateToSearch} data-testid="header-input-button"></i>

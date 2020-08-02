@@ -4,7 +4,6 @@ import {sanitiseString} from '../helpers/helpers';
 import moment from 'moment';
 
 function EventDetailCard({imageUrl, eventName, eventDescription, eventVenue, eventDate, eventOpeningTimes, artists, tickets}) {
-  console.log("EventDetailCard -> eventDate", eventDate)
   return (
     <div className="event-detail-card">
       <div className="event-detail-card__content">
